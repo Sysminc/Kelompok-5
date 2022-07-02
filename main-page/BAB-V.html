@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BAB V</title>
+	<link rel="stylesheet" href="main-page.css">
+</head>
+
+<body class="bg-dark">
+	<h1 class="heading-css">Kesimpulan</h1>
+	<section class="main-content-css">
+		<p>
+			<textarea class="content-textarea" id="textExample" style="border: 1px solid #BBB; color:#444" rows="4" cols="60">
+• Pendidikan adalah usaha sadar dan terencana untuk mewujudkan suasana belajar dan proses
+pembelajaran agar peserta didik secara aktif mengembangkan potensi dirinya memiliki kekuatan
+spiritual keagamaan, pengendalian diri, kepribadian, akhlak mulia, serta ketrampilan diperlukan
+dirinya, masyarakat, bangsa dan negara. Tanpa pendidikan yang sesuai dengan jati diri bangsa
+tidak akan mungkin tujuan pencapaian pendidikan tidak akan terpenuhi. Sebagai kunci kemajuan
+bangsa diukur dari salah satunya kemajuan pendidikan yang dimilikki oleh bangsa tersebut.
+
+• Guru memilikki tugas yang mulia untuk membantu peserta didik sebagai fasilitator dalam
+mencapai cita-cita kehidupan. Tidak hanya dalam pendidikan ilmu pengetahuan namun juga dalam
+pendidikan moral. Mengingat kedua hal itu saling terkait satu sama lain agar tercapai kondisi yang
+seimbang antara kecerdasan dengan perilaku yang dilakukan. Amanah yang dipegang oleh guru
+untuk membantu membentuk peradaban bangsa yang lebih baik diwujudkan dengan memberikan
+pengajaran kepada peserta didik sesuai dengan kompetensi yang dimilikki oleh seorang guru.
+
+• Organisasi profesi guru sebagai wadah perkumpulan untuk mengembangkan profesionalisme,
+memperjuangkan perlindungan hukum, pembinaan dan perlindungan keselamatan kerja serta
+menghimpun dan menyalurkan aspirasi anggotanya. Optimalisasi organisasi profesi guru memilikki
+peranan yang sangat penting untuk mewujudkan harkat dan martabat profesi guru.
+
+• Perlindungan profesi guru saat ini telah diatur dalam Undang-Undang Nomor 14 Tahun
+2005 dan Peraturan Menteri Pendidikan dan Kebudayaan Nomor 10 Tahun 2017. Di era saat ini
+masih banyak tindakan kekerasan oleh siswa ataupun orang tua kepada Guru. Jaminan peraturan
+yang ada belum mampu untuk melindungi guru dari ancaman ranah tindak pidana. 
+			</textarea>
+		</p>
+	</section>
+	<ul class="pagination">
+		<li class="page-item"><a class="page-link" href="../index.html">Home</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-I.html">1</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-II.html">2</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-III.html">3</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-IV.html">4</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-V.html">5</a></li>
+	</ul>
+	<script>
+
+		var $ = function (id) {
+
+			return document.getElementById(id);
+		}
+
+
+		/*Bounce effect!*/
+		function bounce(progress) {
+			for (var a = 0, b = 1, result; 1; a += b, b /= 2) {
+				if (progress >= (7 - 4 * a) / 11) {
+					return -Math.pow((11 - 6 * a - 11 * progress) / 4, 2) + Math.pow(b, 2);
+				}
+			}
+		}
+		/*Animation time interval function - do not edit*/
+
+		function animate(opts) {
+
+			var start = new Date
+
+			var id = setInterval(function () {
+				var timePassed = new Date - start
+				var progress = timePassed / opts.duration
+
+				if (progress > 1) progress = 1
+
+				var delta = opts.delta(progress)
+				opts.step(delta)
+
+				if (progress == 1) {
+					clearInterval(id)
+				}
+			}, opts.delay || 10)
+
+		}
+		/*the text typing animation function*/
+		animateText($('textExample'));
+
+		function animateText(textArea) {
+
+			/*Predefine text to be animated into the textarea*/
+			var text = textArea.value;
+
+			/*Declare animation starting point at 0, through the full length of text*/
+
+			var to = text.length, from = 0
+
+			/*Typical animation settings*/
+
+			animate({
+				delay: 40,
+				duration: 10000,
+				delta: bounce,
+				step: function (delta) {
+
+					/*Animates the forward typing then deleting and retyping effect*/
+
+					var typedResult = (to - from) * delta + from
+
+					/*Assign the value of textarea to the string assigned to 'text' variable*/
+
+					textArea.value = text.substr(0, Math.ceil(typedResult))
+				}
+			})
+		};
+	</script>
+</body>
+
+</html>

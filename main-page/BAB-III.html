@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BAB III</title>
+	<link rel="stylesheet" href="main-page.css">
+</head>
+
+<body class="bg-dark">
+	<h1 class="heading-css">Peranan Organisasi Profesi Guru</h1>
+	<section class="main-content-css">
+		<p>
+			<textarea class="content-textarea" id="textExample" style="border: 1px solid #BBB; color:#444" rows="4" cols="60">
+• Persatuan Guru Republik Indonesia (PGRI) merupakan sebuah perkumpulan berbadan hukum yang
+didirikan dan di urusoleh guru sebagai wadah untuk mengembangkan profesionalisme,
+memperjuangkan perlindungan hukum, dan perlindungan keselamatan kerja serta
+menghimpun dan menyalurkan aspirasi anggotanya.
+
+• PGRI mempunyai peranan strategis dalam reformasi pendidikan nasiona kepada anggotanya,
+PGRI berperan dan bertanggung jawab serta memperjuangkan dalam upaya mewujudkan serta melindungi
+hak-hak asasi dan martabat guru khususnya dalam aspek profesinya dan kesejahteraannya.
+Sebagai Organisasi profesi PGRI juga ingin mempersatukan semua guru dan tenaga kependidikan
+di semua jenis, jenjang, dan satuan pendidikan guna meningkatkan
+pengabdian dan peran serta dalampembangunan nasional.
+Dalam hal ini PGRI juga harusnya mampu untuk mengadakan hubungan kerjasama dengan lembaga-lembaga
+pendidikan, organisasi yang bergerak dalam bidang pendidikan, dan
+atau organisasi kemasyarakatan umumnya dalam rangka peningkatan mutu pendidikan dan kebudayaan.
+
+• Keberadaan organisasi profesi keguruan, adalah merupakan suatu keharusan profesional yang sangat diperlukan.
+Peran melindungi dan mengayomi bahkan ketika guru dianggap tidak profesional dalam melaksanakan profesinya,
+organisasi profesilah harus tampil lebih di awal untuk melakukan evaluasi dan verifikasi.
+Karena organisasi profesilah yang lebih berkompeten melakukan evaluasi dan verifikasi.
+Uji profesional guru dan profesi yang lain hanya mungkin dilakukan oleh pihak yang memahami dan mendalami profesi tersebut.
+Organisasi profesilah yang seharusnya membina dan melindungi dengan memakai pendekatan kode etik profesi keguruan.
+Yang didalamnya terdapat perangkat profesional dan mandiri yang menjalankan peran tersebut, yakni Dewan Kehormatan Guru Indonesia (DKGI).
+
+• Dewan Kehormatan Guru Indonesia (DKGI) adalah perangkat kelengkapan organisasi PGRI yang dibentuk untuk menjalankan tugas dalam memberikan
+saran, pendapat, pertimbangan, penilaian, penegakan, dan pelanggaran disiplin organisasi dan etika profesi guru.
+Peraturan tentang Dewan Kehormatan Guru Indonesia adalah pedoman pokok dalam mengelola Dewan Kehormatan Guru Indonesia, dalam hal
+penyelenggaraan tugas dan wewenang bimbingan, pengawasan, dan penilaian Kode Etik Guru Indonesia.
+
+• Dalam pasal 42 Undang-Undang Nomor 14 Tahun 2005 Pasal 42, Organisasi profesi guru mempunyai kewenangan:
+a). Menetapkan dan menegakkan kode etik guru
+b). Memberikan bantuan hukum kepada guru
+c). Memberikan perlindungan profesi guru
+d). Melakukan pembinaan dan pengembangan profesi guru
+e). Memajukan pendidikan nasional.
+
+• Optimalisasi Lembaga Bantuan Hukum (LBH) yang berada dibawah naungan PGRI diharapkan menjadi salah satu solusi dalam
+memberikan perlindungan terhadap guru yang tengah menghadapi permasalahan hukum.
+Peranan organisasi profesi guru memilikki peranan penting untuk memberikan perlindungan dan pembinaan profesi guru.
+			</textarea>
+		</p>
+	</section>
+	<ul c<ul class="pagination">
+		<li class="page-item"><a class="page-link" href="../index.html">Home</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-I.html">1</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-II.html">2</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-III.html">3</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-IV.html">4</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-V.html">5</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-IV.html">Next</a></li>
+	</ul>
+	<script>
+
+		var $ = function (id) {
+
+			return document.getElementById(id);
+		}
+
+
+		/*Bounce effect!*/
+		function bounce(progress) {
+			for (var a = 0, b = 1, result; 1; a += b, b /= 2) {
+				if (progress >= (7 - 4 * a) / 11) {
+					return -Math.pow((11 - 6 * a - 11 * progress) / 4, 2) + Math.pow(b, 2);
+				}
+			}
+		}
+		/*Animation time interval function - do not edit*/
+
+		function animate(opts) {
+
+			var start = new Date
+
+			var id = setInterval(function () {
+				var timePassed = new Date - start
+				var progress = timePassed / opts.duration
+
+				if (progress > 1) progress = 1
+
+				var delta = opts.delta(progress)
+				opts.step(delta)
+
+				if (progress == 1) {
+					clearInterval(id)
+				}
+			}, opts.delay || 10)
+
+		}
+		/*the text typing animation function*/
+		animateText($('textExample'));
+
+		function animateText(textArea) {
+
+			/*Predefine text to be animated into the textarea*/
+			var text = textArea.value;
+
+			/*Declare animation starting point at 0, through the full length of text*/
+
+			var to = text.length, from = 0
+
+			/*Typical animation settings*/
+
+			animate({
+				delay: 40,
+				duration: 10000,
+				delta: bounce,
+				step: function (delta) {
+
+					/*Animates the forward typing then deleting and retyping effect*/
+
+					var typedResult = (to - from) * delta + from
+
+					/*Assign the value of textarea to the string assigned to 'text' variable*/
+
+					textArea.value = text.substr(0, Math.ceil(typedResult))
+				}
+			})
+		};
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BAB II</title>
+	<link rel="stylesheet" href="main-page.css">
+</head>
+
+<body class="bg-dark">
+	<h1 class="heading-css">Guru Sebagai Profesi yang Mulia</h1>
+	<section class="main-content-css">
+		<p>
+			<textarea class="content-textarea" id="textExample" style="border: 1px solid #BBB; color:#444" rows="4" cols="60">
+• Guru adalah pendidik profesional dengan tugas utama mendidik, mengajar, membimbing, 
+mengarahkan, melatih, menilai dan mengevaluasi peserta didik pada pendidikan anak usia dini 
+jalur pendidikan formal, pendidikan dasar, dan pendidikan menengah.
+
+• Guru memilikki tugas yang mulia untuk membantu peserta didik sebagai fasilitator dalam mencapai cita-cita kehidupan.
+Tidak hanya dalam pendidikan ilmu pengetahuan namun juga dalam pendidikan moral. 
+Mengingat kedua hal itu saling terkait satu sama lain agar tercapai kondisi yang seimbang antara kecerdasan dengan 
+perilaku yang dilakukan. Sesungguhnya, seorang guru mempunyai multi peranan yang sangat penting dalam 
+kesuksesan pendidikan. Gurulah yang menjadi ujung tombak dari keberhasilan pendidikan pada 
+tataran operasional. Guru juga yang senantiasa berada pada baris terdepan pendidikan yang 
+berhadapan secara langsung dengan peserta didik melalui proses interaksi instruksional sebagai 
+wahana proses pembelajaran siswa dalam nuansa pendidikan.
+
+• Seorang guru dalam memberikan pengajaran dituntut memilikki tindakan profesional, 
+kompeten untuk mendukung pembelajaran yang optimal. Profesional adalah pekerjaan atau 
+kegiatan yang dilakukan oleh seseorang dan menjadi sumber penghasilan kehidupan yang 
+memerlukan keahlian, kemahiran, atau kecakapan yang memenuhi standar mutu atau norma 
+tertentu serta memerlukan pendidikan profesi.
+• Guru mempunyai kedudukan sebagai tenaga profesional
+pada jenjang pendidikan dasar, pendidikan menengah, dan pendidikan anak usia dini 
+pada jalur pendidikan formal yang diangkat sesuai dengan peraturan perundang-undangan.
+
+• Profesi guru dan profesi dosen merupakan bidang pekerjaan khusus yang dilaksanakan 
+berdasarkan prinsip sebagai berikut:
+a) Memilikki bakat, minat, panggilan jiwa, dan idealisme
+b) Memilikki komitmen untuk meningkatkan mutu pendidikan, keimanan, ketakwaan, dan 
+akhlak mulia
+c) Kualifikasi akademik dan latar belakang pendidikan sesuai dengan bidang tugas.
+d) Memilikki kompetensi yang diperlukan sesuai dengan bidang tugas
+e) Memilikki tanggung jawab atas pelaksanaan tugas keprofesionalan
+f ) Memperoleh penghasilan yang ditentukan sesuai dengan prestasi kerja
+g) Memilikki kesempatan untuk mengembangkan keprofesionalan secara berkelanjutan 
+dengan belajar sepanjang hayat
+h) Memilikki jaminan perlindungan hukum dalam melaksanakan tugas keprofesionalan 
+i) Memillikki organisasi profesi yang mempunyai kewenangan mengatur hal-hal yang 
+berkaitan dengan tugas keprofesionalan guru.
+			</textarea>
+		</p>
+	</section>
+	<ul class="pagination">
+		<li class="page-item"><a class="page-link" href="../index.html">Home</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-I.html">1</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-II.html">2</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-III.html">3</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-IV.html">4</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-V.html">5</a></li>
+		<li class="page-item"><a class="page-link" href="BAB-III.html">Next</a></li>
+	</ul>
+	<script>
+
+		var $ = function (id) {
+
+			return document.getElementById(id);
+		}
+
+
+		/*Bounce effect!*/
+		function bounce(progress) {
+			for (var a = 0, b = 1, result; 1; a += b, b /= 2) {
+				if (progress >= (7 - 4 * a) / 11) {
+					return -Math.pow((11 - 6 * a - 11 * progress) / 4, 2) + Math.pow(b, 2);
+				}
+			}
+		}
+		/*Animation time interval function - do not edit*/
+
+		function animate(opts) {
+
+			var start = new Date
+
+			var id = setInterval(function () {
+				var timePassed = new Date - start
+				var progress = timePassed / opts.duration
+
+				if (progress > 1) progress = 1
+
+				var delta = opts.delta(progress)
+				opts.step(delta)
+
+				if (progress == 1) {
+					clearInterval(id)
+				}
+			}, opts.delay || 10)
+
+		}
+		/*the text typing animation function*/
+		animateText($('textExample'));
+
+		function animateText(textArea) {
+
+			/*Predefine text to be animated into the textarea*/
+			var text = textArea.value;
+
+			/*Declare animation starting point at 0, through the full length of text*/
+
+			var to = text.length, from = 0
+
+			/*Typical animation settings*/
+
+			animate({
+				delay: 40,
+				duration: 10000,
+				delta: bounce,
+				step: function (delta) {
+
+					/*Animates the forward typing then deleting and retyping effect*/
+
+					var typedResult = (to - from) * delta + from
+
+					/*Assign the value of textarea to the string assigned to 'text' variable*/
+
+					textArea.value = text.substr(0, Math.ceil(typedResult))
+				}
+			})
+		};
+	</script>
+</body>
+
+</html>
