@@ -35,14 +35,7 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: [ "Alkhafi Muhammad Syam", "Idris", "Dewi", "Addzahri", "Aji"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    var typed = new Typed(".typing-2", {
-        strings: [ "Alkhafi Muhammad Syam", "Idris", "Dewi", "Addzahri", "Aji"],
+        strings: [ "Alkhafi Muhammad Syam", "Dewi Febriyanti", "Muhammad Idris", "Adzhari Febriansyah", "Aji"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
