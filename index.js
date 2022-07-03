@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: [ "Alkhafi Muhammad Syam", "Dewi Febriyanti", "Muhammad Idris", "Adzhari Febriansyah", "Aji"],
+        strings: [ "Perlindungan Profesi Guru", "Partisipasi Guru Dalam Organisasi Profesi" ],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
