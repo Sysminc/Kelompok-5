@@ -10,4 +10,4 @@
   <li>Bootstrap</li> 
 </ul>
 <br>
-<b>JIf you use this template, please include credit</b>
+<b>If you use this template, please include credit</b>
