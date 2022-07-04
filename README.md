@@ -11,3 +11,5 @@
 </ul>
 <br>
 <b>If you use this template, please include credit</b>
+<br>
+<a href="https://sysminc.wordpress.com" target="_blank">SYSMINC</a>
