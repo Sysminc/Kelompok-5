@@ -9,6 +9,29 @@ body {
     color: whitesmoke;
 }
 
+
+.title-animation {
+    animation: type 2s;
+}
+
+.text-animation {
+    animation: typeing 3s;
+}
+
+@keyframes type {
+    from {
+        filter: blur(10px);
+        transform: matrix(3, 0, 0, 3, 0, 0);
+    }
+}
+
+@keyframes typeing {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
 .pagination {
     margin-top:3%;
     padding:0;
