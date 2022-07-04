@@ -1,11 +1,13 @@
 # Kelompok-5.web
-
-Website main article yang digunakan untuk membaca materi secara online dan lebih responsive
-
-<h1>Fitur</h1>
-- Ajax Libary
-- Jquary Libary
-- Bootstrap 
+<p>
+  Main article website that is used to read material online and is more responsive
+</p>
 <br>
-
-<b>Jika menggunkan tamplate ini tolong sertai credit</b>
+<h1>Fitur</h1>
+<ul>
+  <li>Ajax Libary</li>
+  <li>Jquary Libary</li>
+  <li>Bootstrap</li> 
+</ul>
+<br>
+<b>JIf you use this template, please include credit</b>
