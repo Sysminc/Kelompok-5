@@ -1,9 +1,9 @@
 # Kelompok-5.web
 <p>
-  Main article website that is used to read material online and is more responsive
+  The article website based for read material online and presentasion include animation, responsive and ui firendly.
 </p>
 <br>
-<h1>Fitur</h1>
+<h3>Framework</h3>
 <ul>
   <li>Ajax Libary</li>
   <li>Jquary Libary</li>
